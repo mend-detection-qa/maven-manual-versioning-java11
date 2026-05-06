@@ -28,14 +28,16 @@
         "gte": 1
       },
       "expected_direct_dependencies_number": {
-        "eq": 0
+        "eq": 3
       },
       "expected_transitive_dependencies_number": {
         "gte": 0
       },
       "_comment_expected_dependencies_number": "Optional. Expected number of dependencies with comparison operator. Operators: gt (>), gte (>=), lt (<), lte (<=), eq (==). If not provided, this check will not be performed.",
       "direct_dependencies_names_list": {
-        "eq": []
+        "eq": [
+          "jackson-databind", "commons-lang3", "guava"
+        ]
       },
       "transitive_dependencies_names_list": {
         "contains": []
@@ -49,7 +51,7 @@
       "expected_agent_version": "",
       "expected_plugin_version": "",
       "_comment_agent_versions": "Optional. Expected agent and plugin versions. If not provided, this check will not be performed.",
-      "validate_mend_tags": false,
+      "validate_mend_tags": true,
       "_comment_validate_mend_tags": "Whether to validate project tags from Mend Platform BFF API against update request extraProperties. Options: true | false. Default: false. When true, calls the BFF projects/summaries endpoint and cross-validates sourceUrl, repoId, CTX, commitId, repoFullName tags against extraProperties (owner, commitId, branchName, repository)."
     },
     "validate_vulnerabilities_table": false,
